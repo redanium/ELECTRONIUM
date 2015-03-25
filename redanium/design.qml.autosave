@@ -1,0 +1,155 @@
+import QtQuick 2.0
+import QtQuick.Controls 1.0
+
+Rectangle {
+    id: mainwindow
+    width: 300
+    height: 500
+    color: "#4c5f6d"
+    radius: 58
+    border.width: 1
+    opacity: 0.88
+    border.color: "#0e305c"
+    clip: false
+
+
+
+    Rectangle{
+        id:input
+        border.color: "#a43c3c"
+        border.width: 1
+        anchors.centerIn: parent
+        width: mainwindow.width/2+32
+        height: mainwindow.height/2
+        color: "#532222"
+        radius: 6
+        Rectangle{
+            id:input1
+            x: 31
+            y: 49
+            width: 121
+            height: 32
+            anchors.centerIn: parent
+
+            border.color: "#a43c3c"
+            border.width: 1
+
+
+            color: "#ffffff"
+            radius: 6
+            anchors.verticalCenterOffset: -60
+            anchors.horizontalCenterOffset: 1
+
+
+
+
+        }
+
+        Rectangle{
+
+            id:input2
+            width: 121
+            height: 32
+            radius: 6
+            anchors.centerIn: parent
+TextInput{
+    id:text_input2
+anchors.centerIn: parent
+height: parent.height-2
+width: parent.width-2
+text: "mot de passe"
+horizontalAlignment: TextInput.AlignHCenter
+}
+
+
+
+
+        }
+
+
+
+    }
+
+    Image {
+        id: image1
+        x: 106
+        y: 56
+        width: 89
+        height: 98
+        rotation: -360
+        fillMode: Image.PreserveAspectCrop
+        source: "images/electrical.png"
+        RotationAnimation on rotation {
+            loops:Animation.Infinite
+            from:0
+            to:360
+        }
+    }
+Slider{
+    maximumValue: 5
+    stepSize: 1
+    Rectangle{
+        id:inputo
+        x: 57
+        y: -165
+        border.color: "#a43c3c"
+        border.width: 1
+        anchors.centerIn: parent
+        width: mainwindow.width/2+32
+        height: mainwindow.height/2
+        color: "#532222"
+        radius: 6
+        anchors.verticalCenterOffset: -51
+        anchors.horizontalCenterOffset: 48
+        Rectangle{
+            id:inputo1
+            x: 31
+            y: 49
+            width: 121
+            height: 32
+            anchors.centerIn: parent
+
+            border.color: "#a43c3c"
+            border.width: 1
+
+
+            color: "#ffffff"
+            radius: 6
+            anchors.verticalCenterOffset: -60
+            anchors.horizontalCenterOffset: 1
+
+
+
+
+        }
+
+        Rectangle{
+
+            id:inputo2
+            width: 121
+            height: 32
+            radius: 6
+            anchors.centerIn: parent
+TextInput{
+    id:text_inputo2
+anchors.centerIn: parent
+height: parent.height-2
+width: parent.width-2
+text: "mot de passe"
+horizontalAlignment: TextInput.AlignHCenter
+}
+
+
+
+
+        }
+
+
+
+    }
+    
+    
+    
+}
+
+}

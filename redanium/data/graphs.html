@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+<style type="text/css">
+div { margin-top:20%;margin-bottom:0; padding: 0; height: 100%; bottom:0;}
+
+</style>
+<script src="qrc:/files/data/chart.js"></script>
+</head>
+<body>
+<div style="width:100%;"  >
+<canvas id="canvas"   ></canvas>
+</div>
+<script>
+var barChartData = {
+labels : [%1],
+datasets : [
+{
+fillColor : "rgba(220,220,220,0.5)",
+strokeColor : "rgba(220,220,220,0.8)",
+highlightFill: "rgba(220,220,220,0.75)",
+highlightStroke: "rgba(220,220,220,1)",
+data :
+[
+%2
+]
+}
+
+]
+}
+window.onload = function(){
+var ctx = document.getElementById("canvas").getContext("2d");
+window.myBar = new Chart(ctx).Bar(barChartData, {
+responsive : true
+});
+}
+</script>
+</body>
+</html>

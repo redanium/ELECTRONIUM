@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html> 
+<title>bcmd</title>
+<head> 
+<style type="text/css" media="print">
+<!--
+
+
+  body { 
+    background-color: white; 
+	margin:10px 30px;
+    color: black; 
+    font-size: small; 
+    font-family: sans-serif, helvetica, tahoma, arial; 
+} 
+tr{
+font-size:30px;
+}
+.titles{
+  
+     font-size:40px;
+    font-family: sans-serif, helvetica, tahoma, arial; 
+}
+.page-break  {  
+    display:block;  
+    page-break-before:always;  
+}
+
+-->
+</style>
+
+
+</head> 
+
+<body> 
+
+<div class="parent_pager" style=" text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
+<table align="center"  width="100%" border="0" cellpadding="2" cellspacing="2" style="background-color: #ffffff;">
+<tr valign="top" align="center">
+<td style="border-width : 0px;"><br /><img src="qrc:/files/images/image.jpg" width="100%" height="134" alt="" title="" border="0" />
+
+</td>
+</tr>
+<tr valign="top" align="center" >
+<td style="border-width : 0px;"><br />
+<h1  class="titles">DIRECTION DE DISTRIBUTION</h1>    
+<h1 class="titles">ES-SENIA </h1>
+</td>
+</tr>
+<tr valign="top" align="center" >
+<td style="border-width : 0px;"><br /><br /><br /><br /><h2>Bon de commande</h2> 
+
+</td>
+</tr>
+<tr valign="top" align="center" >
+<td style="border-width : 0px;"><h3>N&deg; %1 Ste/SENIA/%2</h3> 
+
+</td>
+</tr>
+<tr valign="top" align="center" >
+<td style="border-width : 0px;"><h4>Du %3</h4>
+
+</td>
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br /><br />
+<b>Pr&eacute;stataire :</b> %4
+
+</td>
+
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Objet de l'affaire :</b> %5 en date du %6 %7
+
+</td>
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Imputation :</b> 932 1C1 %8
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<div class="page-break"></div> 
+
+<div class="parent_pager">
+<table align="center"  width="100%" border="0" cellpadding="2" cellspacing="2" style="background-color: #ffffff;">
+
+
+
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br /><br />
+<b>Article 1 : Objet du bon de commande</b> 
+<br />Le pr&eacute;sent bon de commande a pour objet %5 en date du %6 %7
+</td>
+
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Article 2 : Proc&eacute;dure de passation</b> 
+<br />Le pr&eacute;sent bon de commande est &eacute;tabli suite &agrave; la convention incident %2.
+
+</td>
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Article 3 : Descriptif des travaux et prix unitaire</b><br />
+Le d&eacute;tail des travaux &agrave; r&eacute;aliser ainsi que les prix unitaires est donn&eacute; dans le tableau ci-dessous.
+</td>
+</tr>
+<tr></tr>
+<tr></tr>
+</table>
+</div>
+<div>
+<br/>
+<table style='border-collapse:collapse;' cellspacing="0" id="mtable" border="1"  align="center" style="border:solid;">
+<tr>
+<td class="col"  align="center"><strong><b>D&eacute;signation</b></strong></td>
+<td class="col"  align="center"><b>Quantit&eacute;</b></td>
+<td class="col"  align="center"><b>Prix unitaire</b></td>
+</tr>
+%9%10
+</table>
+</div>
+
+<div class="page-break"></div> 
+<div class="parent_pager">
+<table align="center"  width="auto" border="0" style="background-color: #ffffff;">
+<tr valign="top">
+<td  style="border-width : 0px;">
+<br /><br />
+<b>Article 4 : Montant du bon de commande</b> 
+<br />Le montant du bon de commande s'&eacute;l&egrave;ve &agrave; :
+</td>
+</tr>
+<tr>
+<td >Montant du bon de commande en HT</td>
+<td width="60px" align="right" class="tva" >%11</td>
+<td>DA&nbsp;</td>
+</tr>
+<tr>
+<td>Montant de la TVA 17%</td>
+<td  width="60px" align="right" class="tva" >%12</td>
+<td>DA&nbsp;</td>
+</tr>
+<tr>
+<td>Montant du bon de commande en TTC</td>
+<td width="60px" align="right" class="tva" >%13</td>
+<td>DA&nbsp;</td>
+</tr>
+<tr><td><br /><b>Montant TTC en lettre : %14</b></td></tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Article 5 : Conditions de paiement</b> 
+<br />Le d&eacute;lai de r&egrave;glement des factures conformes pr&eacute;sent&eacute;es en six (06) exemplaires est fix&eacute; &agrave; soixante (60) jours &agrave; dater de leur r&eacute;ception par l'ordonnateur. La date de l'accus&eacute; de r&eacute;ception faisant foi. Le r&egrave;glement se fera par virement bancaire au compte du b&eacute;n&eacute;ficiaire.
+
+</td>
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Article 6 : R&eacute;vision des prix</b><br />
+Les prix sont fermes non r&eacute;visables et non actualisables. 
+
+</td>
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Article 7 : Retenue de garantie</b><br />
+Une retenue de garantie de 5% est op&eacute;r&eacute;e sur le montant hors taxe de la facture. Elle sera lib&eacute;rable &agrave; la r&eacute;ception d&eacute;finitive qui aura lieu une ann&eacute;e apr&egrave;s la r&eacute;ception provisoire.   
+
+</td>
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Article 8 : Domiciliation bancaire du cocontractant</b><br />
+<font size="-1">La domiciliation bancaire du cocontractant est : </font><b>%15</b>
+
+</td>
+</tr>
+<tr valign="top">
+<td  width="auto" style="border-width : 0px;">
+<br />
+<b>Article 9 : Mise en vigueur</b><br />
+Le pr&eacute;sent bon de commande sera mis en vigueur apr&egrave;s sa signature.  
+</td>
+</tr>
+<tr valign="top">
+
+<td align="right"  width="auto" style="border-width : 0px;">
+ <br/> <b>Etabli, le %3</b>
+</td>
+</tr>
+<tr valign="top">
+
+<td  align="center" style="border-width : 0px;">
+  <br/> <b>Le Chef de STE</b>
+</td>
+
+</tr>
+</table>
+
+
+</div>
+</body> 
+</html>

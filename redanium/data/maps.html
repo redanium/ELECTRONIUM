@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<meta name="viewport" content=
+"initial-scale=1.0, user-scalable=no">
+
+<style type="text/css">
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+#map_canvas { height: 100% }
+#panel {
+position:absolute;
+z-index: 5;
+background-color: ;
+border: 1px solid #999;
+bottom:10px;
+right:10px;
+left:10px;
+padding:5px;
+}
+#panel1 {
+position:absolute;
+z-index: 5;
+background-color:grey ;
+border: 1px solid #999;
+bottom:10px;
+right:10px;
+left:10px;
+padding:5px;
+margin-bottom:25%;
+height:400px;
+width:200px;
+}
+</style>
+
+<!-- Demo style -->
+
+	<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- icon picker -->
+<script type="text/javascript" src=
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyC0DlVXBTJiDN9cqNPRiOzYoCVp_RzaRbc&amp;sensor=false&amp;language=fr">
+</script>
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$.support.cors = true;
+
+//if(!navigator.onLine) maps_nav.setUrl("qrc:/files/data/maps_static.html");
+// global "map" variable
+
+      var map = null;
+      var marker = null;
+      var markers = new Array();
+      var results;
+     
+     
+      var poly;
+
+  function xmlhttpPost(strURL) {
+    var xmlHttpReq = false;
+    var self = this;
+    // Mozilla/Safari
+    if (window.XMLHttpRequest) {
+        self.xmlHttpReq = new XMLHttpRequest();
+    }
+    // IE
+    else if (window.ActiveXObject) {
+        self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    self.xmlHttpReq.open('POST', strURL, true);
+    self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+   
+    self.xmlHttpReq.send(null);
+	
+}
+
+      // var str= incident.i_coordinate;
+      // alert(incident.i_coordinate);
+      //var res = str.split(")");
+      //var t=res[0].split("(");
+      // var ress=t[1].split(',');
+
+        var myCenter =new google.maps.LatLng(35.68184060244453, -0.619354248046875);
+			  var myIncidentCenter=myCenter;
+
+        //<![CDATA[
+        function updateCenterMaps(){
+
+map.setCenter(myIncidentCenter);
+
+}
+
+function loadIcons(){
+
+
+ var other_icons = [], $myIconPicker = $('#myselect3').fontIconPicker();
+
+		$.ajax({
+                url:		'http://codeb.it/wp-content/themes/codebit/js/fonticonpicker/fontello-7275ca86/config.json',
+                dataType:	'JSON',
+
+		}).done(function( response ) {
+                $.each( response.glyphs, function (i,v) {
+                other_icons.push( response.css_prefix_text + v.css );
+                });
+                setTimeout(function () {
+                $myIconPicker.setIcons(other_icons);
+                }, 1000);
+                });
+                $(this).fadeOut(300);
+                return false;
+                }
+                function MVCArrayBinder(mvcArray)
+				{
+                this.array_ = mvcArray;
+                }
+                MVCArrayBinder.prototype = new google.maps.MVCObject();
+                MVCArrayBinder.prototype.get = function(key) {
+                if (!isNaN(parseInt(key))){
+                return this.array_.getAt(parseInt(key));
+                } else {
+                this.array_.get(key);
+                }
+                }
+                MVCArrayBinder.prototype.set = function(key, val) {
+                if (!isNaN(parseInt(key))){
+                this.array_.setAt(parseInt(key), val);
+                } else {
+                this.array_.set(key, val);
+                }
+                
+				
+}
+
+
+     
+    
+
+
+var infowindow = new google.maps.InfoWindow(
+{
+size: new google.maps.Size(150,50)
+});
+
+// A function to create the marker and set up the event window function 
+function createMarker(latlng) {
+var geocoder= new google.maps.Geocoder();
+
+    var marker = new google.maps.Marker({
+    position: latlng,
+    draggable:true,
+    map: map,
+    
+    zIndex: Math.round(latlng.lat()*-100000)<<5
+    });
+
+  
+
+    google.maps.event.addListener(marker, 'click', function() {
+    var path=poly.getPath();
+if (path.getLength()<=1) {
+    geocoder.geocode({'latLng': latlng}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+    if (results[1]) {
+    infowindow.setContent(results[1].formatted_address);
+    
+        if(marker){
+		myIncidentCenter=latlng;
+        infowindow.open(map, marker);
+		if(i_distance)i_distance.text= updateDistance();
+        //map.setZoom(11);
+        }
+        } else {
+        alert('Pas de résultas trouvés');
+        }
+        } else {
+        alert('Google Geocoder a échoué: ' + status);
+        }
+        });
+        }
+        });
+
+
+    google.maps.event.addListener(marker, 'dblclick', function() {
+    var path = poly.getPath();
+    var pathArray = path.getArray();
+
+      if (marker) {
+      var i = markers.indexOf(marker);
+      var j= pathArray.indexOf(marker.getPosition());
+
+            marker.setMap(null);
+            marker = null;
+            markers.splice(i,1);
+            path.removeAt(j);
+            poly.setPath(path);
+            }
+            });
+
+
+
+   
+    return marker;
+	
+    }
+	
+
+
+
+function initialize() {
+// create the map
+
+  var myOptions  =
+  {
+  center:  new google.maps.LatLng(35.711952902907186, -0.630340576171875),
+  zoom: 10,
+  panControl: false,
+  zoomControl: false,
+  zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL},
+  scaleControl: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  map = new google.maps.Map(document.getElementById("map_canvas"),
+  myOptions);
+  map.setTilt(45);
+  var polyOptions = {
+  strokeColor: '#DF3A01',
+  strokeOpacity: 1.0,
+  strokeWeight: 3
+  };
+  poly = new google.maps.Polyline(polyOptions);
+  poly.binder = new MVCArrayBinder(poly.getPath());
+
+  poly.setMap(map);
+
+  // Add a listener for the click event
+  google.maps.event.addListener(map, 'click', addLatLng);
+
+  google.maps.event.addListener(map, 'click', function() {
+  infowindow.close();
+  });
+google.maps.event.addListener(map, 'tilesloaded', function() {
+  // Visible tiles loaded!
+});
+google.maps.event.addListener(map, 'zoom_changed', function() {
+  // Visible tiles loaded!
+});
+google.maps.event.addListener(map, 'center_changed', function() {
+  // Visible tiles loaded!
+
+});
+
+  google.maps.event.addListener(map, 'click', function(event) {
+  
+  marker = createMarker(event.latLng);
+  var path =poly.getPath();
+  var len = path.getLength();
+
+   marker.bindTo('position', poly.binder, (len-1).toString());
+
+   markers.push(marker);
+ 
+   xmlhttpPost("http://gpsium.no-ip.info:8800/log?"+marker.getPosition().lat()+"&"+marker.getPosition().lng()+"&2014-04-04T22:00:00Z&HT05KPL07052&0.6");
+
+	
+
+  });
+
+
+  function addLatLng(event) {
+
+  var path = poly.getPath();
+
+  // Because path is an MVCArray, we can simply append a new coordinate
+  // and it will automatically appear.
+  path.push(event.latLng);
+  }
+  function update() {
+  var path = poly.getPath();
+  var pathArray = path.getArray();
+
+if (marker) {
+var i = markers.indexOf(marker);
+var j= pathArray.indexOf(marker.getPosition());
+
+               markers.splice(i,1,marker);
+
+            path.removeAt(j);
+            path.insertAt(j,marker.getPosition());
+
+            }
+
+  document.getElementById('distance').value ="hello";
+  document.getElementById('origin').value = path[0].toString();
+  document.getElementById('destination').value = path[1].toString();
+  }
+
+function updateDistance(){
+var distance ;
+
+
+distance =  google.maps.geometry.spherical.computeLength(poly.getPath());
+
+return distance;
+}
+
+}
+
+
+//]]>
+</script>
+<title></title>
+</head>
+<body onload="initialize()" onresize="updateCenterMaps()">
+<div id="map_canvas" ></div>
+<div id="panel" style="display: none;" >
+<table>
+<td>Origine: <input type="text" readonly id="origin"></td>
+<td>D&eacute;stination: <input type="text" readonly id="destination"></td>
+<td>Distance(ml): <input type="text" readonly id="distance"> </td>
+</table>
+</div>
+<div id="panel1" style="display: none;" >
+<div class="icons-selector" style="position: relative"><div class="selector"><span class="selected-icon"><i class="fip-icon-block"></i></span><span class="selector-button"><i class="fip-icon-down-dir"></i></span></div><div class="selector-popup" style="display: none;"><div class="selector-search"><input type="text" name="" value="" placeholder="Search icon" class="icons-search-input"><i class="fip-icon-search"></i></div><div class="fip-icons-container"><i class="fip-icon-spin3 animate-spin loading"></i></div><div class="selector-footer" style="display:none;"><span class="selector-pages">1/2</span><span class="selector-arrows"><span class="selector-arrow-left" style="display:none;"><i class="fip-icon-left-dir"></i></span><span class="selector-arrow-right"><i class="fip-icon-right-dir"></i></span></span></div></div></div>
+<input type="text" name="myselect3" id="myselect3" value="icon-heart" style="display: none;">
+<button onclick="loadIcons()">Load</button>
+
+	</div>
+        </body>
+        </html>

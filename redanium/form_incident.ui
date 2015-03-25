@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_incident</class>
+ <widget class="QWidget" name="Form_incident">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1194</width>
+    <height>1159</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial Narrow</family>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Incident</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/files/images/incident.png</normaloff>:/files/images/incident.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QHeaderView::section  {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050,
+                                      stop: 0.6 #434343, stop:1 #656565);
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+}
+QWidget#Form_incident{
+color: rgb(255, 255, 255);
+	background-color: rgb(67, 107, 149);
+}
+QStackedWidget{  
+  background-color:rgb(67, 107, 149);
+color: rgb(255, 255, 255);
+
+}  </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetDefaultConstraint</enum>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="Details">
+        <property name="styleSheet">
+         <string notr="true">QGroupBox{
+
+background-color: rgb(67, 107, 149);
+color:rgb(85, 170, 255);
+border: 2px solid  rgb(255, 153, 51);
+border-radius: 2px;
+
+}
+
+</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="1" rowspan="3">
+          <widget class="QGroupBox" name="groupBox_date_h_d_f">
+           <property name="toolTip">
+            <string>Date  / Heures de travail </string>
+           </property>
+           <property name="statusTip">
+            <string>Date  / Heures de travail </string>
+           </property>
+           <property name="whatsThis">
+            <string>Date  / Heures de travail  incident</string>
+           </property>
+           <property name="accessibleName">
+            <string>Date  / Heures de travail </string>
+           </property>
+           <property name="accessibleDescription">
+            <string>Date  / Heures de travail </string>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="title">
+            <string>Date  / Heures de travail </string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <property name="spacing">
+             <number>7</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <property name="leftMargin">
+             <number>4</number>
+            </property>
+            <property name="topMargin">
+             <number>8</number>
+            </property>
+            <property name="rightMargin">
+             <number>4</number>
+            </property>
+            <property name="bottomMargin">
+             <number>4</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Minimum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <property name="spacing">
+                 <number>7</number>
+                </property>
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetDefaultConstraint</enum>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_Date">
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Date x :</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDateEdit" name="dateEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string/>
+                  </property>
+                  <property name="locale">
+                   <locale language="French" country="France"/>
+                  </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
+                  </property>
+                  <property name="frame">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="accelerated">
+                   <bool>true</bool>
+                  </property>
+                  <property name="displayFormat">
+                   <string>d/M/yyyy</string>
+                  </property>
+                  <property name="calendarPopup">
+                   <bool>true</bool>
+                  </property>
+                  <property name="date">
+                   <date>
+                    <year>2000</year>
+                    <month>2</month>
+                    <day>24</day>
+                   </date>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetDefaultConstraint</enum>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_Heure_Debut">
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Début           :</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTimeEdit" name="timeEdit_Debut">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>Heure début</string>
+                  </property>
+                  <property name="wrapping">
+                   <bool>false</bool>
+                  </property>
+                  <property name="frame">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::UpDownArrows</enum>
+                  </property>
+                  <property name="accelerated">
+                   <bool>true</bool>
+                  </property>
+                  <property name="displayFormat">
+                   <string>h:mm</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_Heure_Fin">
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Fin               :</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTimeEdit" name="timeEdit_Fin">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>Heure Fin</string>
+                  </property>
+                  <property name="wrapping">
+                   <bool>false</bool>
+                  </property>
+                  <property name="frame">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::UpDownArrows</enum>
+                  </property>
+                  <property name="accelerated">
+                   <bool>true</bool>
+                  </property>
+                  <property name="displayFormat">
+                   <string>h:mm</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QLabel" name="label_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>24</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="resources.qrc">:/files/images/red.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Jour férier</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_6">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap resource="resources.qrc">:/files/images/red.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Travail de nuit</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_presence">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>16</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Liste de Présence Employers</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel#label_presence{  
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+    color:white;
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,                                      stop:0 #616161, stop: 0.5 #505050,     stop: 0.6 #434343, stop:1 #656565);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Présence</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableView" name="tableView_presence">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Présence Employers</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="autoScroll">
+                 <bool>true</bool>
+                </property>
+                <property name="editTriggers">
+                 <set>QAbstractItemView::NoEditTriggers</set>
+                </property>
+                <property name="dragEnabled">
+                 <bool>true</bool>
+                </property>
+                <property name="dragDropMode">
+                 <enum>QAbstractItemView::DragDrop</enum>
+                </property>
+                <property name="defaultDropAction">
+                 <enum>Qt::CopyAction</enum>
+                </property>
+                <property name="alternatingRowColors">
+                 <bool>true</bool>
+                </property>
+                <property name="selectionBehavior">
+                 <enum>QAbstractItemView::SelectRows</enum>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>64</width>
+                  <height>64</height>
+                 </size>
+                </property>
+                <property name="gridStyle">
+                 <enum>Qt::NoPen</enum>
+                </property>
+                <property name="sortingEnabled">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="0" rowspan="3">
+          <widget class="QGroupBox" name="groupBox_details">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="title">
+            <string>Détails</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Minimum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>10</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Objet">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Objet</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame, QLabel  {
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+ color:white;
+	 background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050,
+                                      stop: 0.6 #434343, stop:1 #656565);
+}</string>
+              </property>
+              <property name="lineWidth">
+               <number>2</number>
+              </property>
+              <property name="text">
+               <string>Objet :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEdit">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"> QPlainTextEdit#plainTextEdit { background-color: lightyellow }</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::WinPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="backgroundVisible">
+               <bool>false</bool>
+              </property>
+              <property name="centerOnScroll">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>type de l'incident</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame, QLabel{
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+ color:white;
+	 background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050,
+                                      stop: 0.6 #434343, stop:1 #656565);
+}</string>
+              </property>
+              <property name="text">
+               <string>Type :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="insertPolicy">
+               <enum>QComboBox::NoInsert</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>Type d'incident</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Aérien</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Sous-terrain</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Poste</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Direction</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame, QLabel{
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+ color:white;
+	 background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050,
+                                      stop: 0.6 #434343, stop:1 #656565);
+}
+</string>
+              </property>
+              <property name="text">
+               <string>Direction :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_3">
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>30</height>
+               </size>
+              </property>
+              <item>
+               <property name="text">
+                <string>Direction</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Es-Senia</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Oran</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Agence">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>22</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Agence</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame, QLabel {
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+ color:white;
+	 background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050,
+                                      stop: 0.6 #434343, stop:1 #656565);
+}</string>
+              </property>
+              <property name="text">
+               <string>Agence :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_Agence">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Agent">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Agent</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame, QLabel {
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+ color:white;
+	 background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050,
+                                      stop: 0.6 #434343, stop:1 #656565);
+}</string>
+              </property>
+              <property name="text">
+               <string>Agent :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="checkableListWidget" name="Checkablewidget" native="true">
+              <property name="styleSheet">
+               <string notr="true">QWidget#Checkablewidget{
+	border: 2px solid  rgb(255, 153, 51);
+border-radius: 2px;
+
+
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Objet_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>50</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Commande</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame, QLabel  {
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+ color:white;
+	 background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050,
+                                      stop: 0.6 #434343, stop:1 #656565);
+}</string>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="text">
+               <string>Bon de commande :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widgetCmd" native="true">
+              <property name="styleSheet">
+               <string notr="true">QWidget#widgetCmd{
+border: 2px solid  rgb(255, 153, 51);
+border-radius: 2px;
+}</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>2</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>2</number>
+               </property>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0,0,0,0,0,0">
+                 <property name="spacing">
+                  <number>3</number>
+                 </property>
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetDefaultConstraint</enum>
+                 </property>
+                 <item>
+                  <spacer name="horizontalSpacer_11">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>Numéro :</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="spinBox_Cmd_Num">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Numéro de commande</string>
+                   </property>
+                   <property name="wrapping">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="specialValueText">
+                    <string/>
+                   </property>
+                   <property name="accelerated">
+                    <bool>true</bool>
+                   </property>
+                   <property name="suffix">
+                    <string/>
+                   </property>
+                   <property name="prefix">
+                    <string/>
+                   </property>
+                   <property name="minimum">
+                    <number>0</number>
+                   </property>
+                   <property name="maximum">
+                    <number>99999</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>1</number>
+                   </property>
+                   <property name="value">
+                    <number>0</number>
+                   </property>
+                   <property name="displayIntegerBase">
+                    <number>10</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_Date_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>du :</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDateEdit" name="dateEdit_2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>Date de commande</string>
+                   </property>
+                   <property name="locale">
+                    <locale language="French" country="France"/>
+                   </property>
+                   <property name="wrapping">
+                    <bool>false</bool>
+                   </property>
+                   <property name="frame">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="accelerated">
+                    <bool>true</bool>
+                   </property>
+                   <property name="displayFormat">
+                    <string>d/M/yyyy</string>
+                   </property>
+                   <property name="calendarPopup">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_5">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <property name="sizeConstraint">
+                   <enum>QLayout::SetMinimumSize</enum>
+                  </property>
+                  <item>
+                   <widget class="QToolButton" name="toolButton_5">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/files/images/add.png</normaloff>:/files/images/add.png</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_8">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="toolTip">
+                     <string>Notes</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLabel#label_8{  
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+    color:white;
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,                                      stop:0 #616161, stop: 0.5 #505050,     stop: 0.6 #434343, stop:1 #656565);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Notes</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="toolButton_4">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="resources.qrc">
+                      <normaloff>:/files/images/minus.png</normaloff>:/files/images/minus.png</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QListView" name="listView">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>220</height>
+                   </size>
+                  </property>
+                  <property name="sizeAdjustPolicy">
+                   <enum>QAbstractScrollArea::AdjustToContents</enum>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <widget class="QLabel" name="label_9">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel#label_9{  
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+    color:white;
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,                                      stop:0 #616161, stop: 0.5 #505050,     stop: 0.6 #434343, stop:1 #656565);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Fournitures</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTableView" name="tableView_fournitures">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>220</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <item>
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton">
+         <property name="toolTip">
+          <string>Travaux</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/files/images/back.png</normaloff>:/files/images/back.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_12">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_2">
+         <property name="toolTip">
+          <string>Travaux</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/files/images/next.png</normaloff>:/files/images/next.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>checkableListWidget</class>
+   <extends>QWidget</extends>
+   <header>checkablelistwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>comboBox_2</tabstop>
+  <tabstop>comboBox_Agence</tabstop>
+  <tabstop>dateEdit_2</tabstop>
+  <tabstop>timeEdit_Debut</tabstop>
+  <tabstop>timeEdit_Fin</tabstop>
+  <tabstop>dateEdit</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
